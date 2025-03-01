@@ -102,6 +102,24 @@ Eligible Files:
 - If a file is **already in moved log**, it will be skipped
 - If Plex library **renamed/moved** the file, rescan the library
 
+## Automating with Task Scheduler
+
+You can automate this script using Windows Task Scheduler.
+
+### Suggested Task Scheduler Settings:
+
+- **Task Name:** `PlexWatchedMediaMover`
+- **Run Whether User is Logged On or Not**
+- **Run with Highest Privileges**
+- **Triggers:** Weekly on **Monday at 9AM**
+- **Program:** `powershell.exe`
+- **Arguments:** `-ExecutionPolicy Bypass -File "C:\Scripts\PlexWatchedMediaMover.ps1"`
+- **Additional Settings:**
+  - Allow task to be run on demand
+  - Run as soon as possible if missed schedule
+  - If task fails, restart every 1 hour (up to 3 times)
+  - Stop task if running longer than 3 days
+
 ## Contributing
 Feel free to fork, modify, and improve the script! Submit PRs on **GitHub** to add features or fixes.
 
