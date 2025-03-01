@@ -1,5 +1,5 @@
 # Set API key and base URL
-$apiKey = "860628d54c224533b70a3a176a75973d"
+$apiKey = "YOUR_API_KEY_HERE"
 $baseUrl = "http://localhost:8181/api/v2"
 
 # Configurable variables
